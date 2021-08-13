@@ -1,0 +1,17 @@
+.navbar{
+    font-family: 'Roboto', sans-serif;
+}
+.searchBox{
+    position: relative;
+}
+.searchBtn{
+    position: absolute;
+    top: 7px;
+    right: 14px;
+    border: none;
+    background-color: #fff;
+}
+.searchIcon{
+    font-size: 18px;
+    color: #4B5258;
+}

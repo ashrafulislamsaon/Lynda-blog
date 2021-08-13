@@ -1,23 +1,52 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
+import Home from './pages/Home/Home';
+import SinglePostPage from './pages/SinglePostPage/SinglePostPage';
+import Login from './pages/Login/Login';
+import Registration from './pages/Registration/Registration';
+import AddPost from './pages/Dashboard/AddPost/AddPost';
+import EditUser from './pages/Dashboard/EditUser/EditUser';
+import { useContext } from 'react';
+import { AuthContext } from './context/AuthContext';
+import AllPost from './components/AllPost/AllPost';
+
 
 function App() {
+  const  { user } = useContext(AuthContext);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+              <Home/>
+          </Route>
+          <Route path="/post">
+            <AllPost/>
+          </Route>
+          <Route  path="/posts/:id">
+              <SinglePostPage/>
+          </Route>
+          <Route  path="/login">
+              {
+                user ? <Redirect to="/"/> : <Login/>
+              }
+          </Route>
+          <Route  path="/register">
+              <Registration/>
+          </Route>
+          <Route  path="/dashboard/add-post">
+              <AddPost/>
+          </Route>
+          <Route  path="/dashboard/edit-user">
+              <EditUser/>
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

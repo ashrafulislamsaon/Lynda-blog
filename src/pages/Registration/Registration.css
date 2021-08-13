@@ -1,0 +1,39 @@
+.login{
+    background-image: url("../../images/oceanwow.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+}
+.loginInput{
+    border: 1px solid #38f9d7;
+    padding: 10px;
+    border-radius: 50px;
+}
+.loginInput:focus{
+    outline: 0;
+}
+.loginBtn{
+    border: 1px solid #f5f5f5;
+    margin-top: 10px;
+    padding: 10px 0;
+    border-radius: 50px;
+}
+.redirectRegister{
+    font-weight: bold;
+}
+.signUp{
+    color:blue
+}
+.errmsg{
+    color: red;
+    margin-top: 10px;
+}

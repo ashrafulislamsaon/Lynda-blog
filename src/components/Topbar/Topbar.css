@@ -1,0 +1,61 @@
+.topbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #f0efeb;
+    z-index: 999;
+}
+
+/* icon styling */
+.fab{
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.fa-envelope{
+    color: #47E260;
+}
+.fa-phone-square-alt{
+    color: #F6524F;
+}
+.fa-facebook{
+    color: #0D89F0;
+}
+.fa-instagram{
+    color: #CE2589;
+}
+.fa-twitter{
+    color: #1DA1F2;
+}
+.fa-linkedin{
+    color: #0A66C2;
+}
+/* icon styling */
+.topbarRightImg{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: flex;
+    cursor: pointer;
+}
+
+/* user options */
+.userOptions{
+    flex-direction: column;
+    display: none;
+    position: absolute;
+}
+.topLink{
+    margin-right: 10px;
+}
+.topRightAvatar{
+    position: relative;
+}
+.topRightAvatar:hover .userOptions{
+    top: 5px;
+    right: 45px;
+    display: block;
+}

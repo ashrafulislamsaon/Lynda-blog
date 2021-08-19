@@ -14,7 +14,13 @@ import EditUser from './pages/Dashboard/EditUser/EditUser';
 import { useContext } from 'react';
 import { AuthContext } from './context/AuthContext';
 import AllPost from './components/AllPost/AllPost';
+import firebase from "firebase/app";
+import "firebase/firestore";
+import firebaseConfig from './firebase.confog';
 
+if(!firebase.apps.length){
+  firebase.initializeApp(firebaseConfig);
+}
 
 function App() {
   const  { user } = useContext(AuthContext);
